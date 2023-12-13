@@ -1,0 +1,22 @@
+<div class="untree_co-section product-section before-footer-section">
+  <div class="container">
+    <div class="row">
+      <!-- Start Column  -->
+      <div class="col-12 col-md-4 col-lg-3 mb-5" *ngFor="let p of productOrders">
+        <a class="product-item">
+          <!-- Add style attribute to set width and height -->
+          <img src="{{ p.product.imageart }}" style="width: 250px; height: auto;">
+          <h3 class="product-title">{{ p.product.marque }}</h3>
+          <h3 class="product-title">{{ p.product.designation }}</h3>
+          <strong class="product-price">{{ p.product.prix }}Dt</strong>
+          <div class="row">
+            <div class="col-12 padding-0">
+              <button class="btn btn-primary" (click)="addProductToCart(p)" [disabled]="p.product.qtestock === 0">Add To Cart</button>
+            </div>
+          </div>
+        </a>
+      </div>
+      <!-- End Column  -->
+    </div>
+  </div>
+</div>

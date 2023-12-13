@@ -1,0 +1,14 @@
+
+<div class="row">
+  <div class="col-md-9">
+      <app-cards #productsC [hidden]="orderFinished" (productAdded)="addProductToCart($event)"></app-cards>
+  </div>
+  <div class="col-md-3">
+    <app-panier 
+    [productAdded]="productAdded"
+    (onOrderFinished)=finishOrder($event) #shoppingCartC 
+    [hidden]="orderFinished"></app-panier>
+</div>
+</div>
+
+<router-outlet></router-outlet>

@@ -1,0 +1,7 @@
+{
+  "/api": {
+    "target": "https://api.cloudinary.com",
+    "secure": false,
+    "changeOrigin": true
+  }
+}
